@@ -10,6 +10,8 @@ COPY nginx.conf /etc/nginx/conf.d/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Tạo và cấp quyền cho các thư mục mà Nginx cần
+
+
 RUN mkdir -p /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp /var/cache/nginx/fastcgi_temp /var/cache/nginx/uwsgi_temp /var/cache/nginx/scgi_temp && \
     mkdir -p /var/run && \
     chown -R nginx:nginx /var/cache/nginx /var/log/nginx /var/run && \
