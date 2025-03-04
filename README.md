@@ -1,5 +1,5 @@
 ---
-title: Ngftumtyfny
+title: tét pờ rồ si nờ git
 emoji: 🌖
 colorFrom: indigo
 colorTo: red
