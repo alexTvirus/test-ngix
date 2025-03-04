@@ -1,5 +1,5 @@
 # Sử dụng image Nginx chính thức từ Docker Hub
-FROM nginx:latest
+FROM nginx:stable
 
 # Xóa file cấu hình mặc định của Nginx
 RUN rm /etc/nginx/conf.d/default.conf
@@ -20,6 +20,10 @@ RUN mkdir -p /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp /var/cache
 # Tạo thư mục log tùy chỉnh
 RUN mkdir -p /var/log/nginx/proxy && \
     chown -R nginx:nginx /var/log/nginx/proxy
+	
+USER root
+
+RUN chmod -R 777 /var/run
 
 # Expose port 80 để nhận request
 EXPOSE 7860
